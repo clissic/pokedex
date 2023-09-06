@@ -190,7 +190,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    column-gap: 7vw;
+    column-gap: 5vw;
     margin: -.6vh 0 0 .2vw;
     color: white;
 }
