@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#pokedex {
+    width: 100vw;
+    height: 100vh;
+    background: url(./img/fondoPokedex.jpg);
+    background-size: 100vw 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "input input input input input input input input input input"
+    "input input input input input input input input input input"
+    "pokdx pokdx pokdx pokdx pokdx pokdx nada1 nada1 nada1 nada1"
+    "pokdx pokdx pokdx pokdx pokdx pokdx pokmn pokmn pokmn nada2"
+    "pokdx pokdx pokdx pokdx pokdx pokdx pokmn pokmn pokmn nada2"
+    "pokdx pokdx pokdx pokdx pokdx pokdx pokmn pokmn pokmn nada2"
+    "pokdx pokdx pokdx pokdx pokdx pokdx pokmn pokmn pokmn nada2"
+    "pokdx pokdx pokdx pokdx pokdx pokdx nada3 nada3 nada3 nada3"
+    "pokdx pokdx pokdx pokdx pokdx pokdx nada3 nada3 nada3 nada3"
+    "pokdx pokdx pokdx pokdx pokdx pokdx nada3 nada3 nada3 nada3";
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    width: 100%;
+}
+
+#input h1 {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    width: 25%;
+}
+
+#inputDiv {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    width: 100%;
+    justify-content: center;
+}
+
+#inputName {
+    height: 4vh;
+    width: 30%;
+    background-color: white;
+    border: black solid 2px;
+    color: black;
+    padding-left: 10px;
+}
+
+#buscar {
+    width: 7%;
+    border-radius: 0 20px 20px 0;
+    border: black solid 2px;
+    height: 4.5vh;
+    background-color: black;
+    color: white;
+}
+
+#buscar:hover {
+    background-color: rgb(70, 70, 70);
+    cursor: pointer;
+    border: rgb(70, 70, 70) solid 2px;
+}
+
+#buscar:active {
+    background-color: grey;
+    border: grey solid 2px;
+}
+
+#inputDiv label {
+    background-color: black;
+    color: white;
+    border: black solid 2px;
+    border-radius: 20px 0 0 20px;
+    width: 8%;
+    text-align: center;
+}
+
+.pokemonLejos {
+    grid-area: pokmn;
+    margin: auto;
+}
+
+.pokemonLejos img {
+    width: 20vw;
+    filter: blur(5px);
+}
+
+#input {
+    grid-area: input;
+    position: absolute;
+}
+
+.dataContainer {
+    grid-area: pokdx;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1"
+    "nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1"
+    "nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1 nada1"
+    "nada5 imgpk imgpk stats stats nada0 moves moves moves moves"
+    "nada5 imgpk imgpk stats stats nada0 moves moves moves moves"
+    "nada5 imgpk imgpk stats stats nada0 nada4 nada4 nada4 nada2"
+    "nada5 nada6 nada6 nada6 nada3 nada3 nada4 nada4 nada4 nada2"
+    "nada5 nombr nombr nada9 nada3 nada3 nada4 nada4 nada4 nada2"
+    "nada5 nombr nombr nada9 nada3 nada3 habil habil habil nada2"
+    "nada5 nada8 nada8 nada8 nada3 nada3 nada7 nada7 nada7 nada2";
+}
+
+.img {
+    grid-area: imgpk;
+}
+
+.img img {
+    width: 12vw;
+    margin-left: 1vw;
+}
+
+.stats {
+    grid-area: stats;
+    font-size: .7rem;
+    padding-top: 5vh;
+    margin-left: .5vw;
+}
+
+.nombre {
+    grid-area: nombr;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 1vw;
+    padding: 3.4vh 0 0 0;
+    margin-left: -.3vw;
+}
+
+.nombre h1 {
+    font-size: large;
+}
+
+.nombre p {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-left: .3vw;
+}
+
+.moves {
+    grid-area: moves;
+}
+
+.moves h2 {
+    color: beige;
+    margin: -2vh 0 2vh -1vw;
+}
+
+.moves div {
+    display: flex;
+    flex-direction: row;
+    padding: 1vh 0 0 .5vw;
+    column-gap: 2vw;
+    color: white;
+    font-size: medium;
+}
+
+.abilities {
+    grid-area: habil;
+}
+
+.abilities h2 {
+    font-size: medium;
+    color: beige;
+    margin: -3vh 0 1vh -1vw;
+}
+
+.abilities ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 7vw;
+    margin: -.6vh 0 0 .2vw;
+    color: white;
+}
+
